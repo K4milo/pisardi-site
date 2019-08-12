@@ -1,0 +1,93 @@
+.hero {
+	&-slider {
+		
+		// Slide controls
+		.slick-dots {
+			bottom: rem(20px);
+			@include mq('md') {
+				width: rem(30px);
+				@include center('vertical');
+				left: rem(80px);
+				bottom: unset;
+			}
+
+			z-index: 3;
+			li {
+				display: block;
+				margin: rem(7px) rem(6px);
+				width: rem(15px);
+				height: rem(15px);
+				border-radius: 100%;
+				background-color: rgba($white,0.5);
+				transition: all 0.34s;
+				@include mq('md') {
+					margin: rem(10px) auto;
+				}
+				&.slick-active {
+					width: rem(20px);
+					height: rem(20px);
+					background-color: $white;
+				}
+			}
+		}
+
+
+		// Slide items
+		&__row {
+			@include bgcover;
+			min-height: 100vh;
+			position: relative;
+			background-position: top center;
+			padding: rem(25px);
+			@include mq('md') {
+				padding: rem(80px);
+			} 
+			&::after {
+				content: "";
+				@include coverAbsolute(1);
+				background-color: rgba($black, 0.25);
+			}
+		}
+
+		&__caption {
+			@include center('vertical');
+			left: unset;
+			right: rem(25px);
+			width: 50%;
+			max-width: rem(440px);
+			z-index: 2;
+			text-align: right;
+			font-family: $ar;
+			@include mq('md') {
+				right: rem(80px);
+			}
+			h3 {
+				color: $white;
+				@include font(35px);
+				@include mq('md') {
+					@include font(60px);
+				}
+			}
+			.content {
+				p {
+					color: $gray;
+					@include font(10px);
+					@include mq('md') {
+						@include font(14px);
+					}
+				}
+			}
+			a {
+				color: $yellow;
+				padding: rem(10px) rem(20px); 
+				text-transform: uppercase;
+				margin-top: rem(30px);
+				@include font(10px);
+				@include mq('md') {
+					margin-top: rem(50px);
+					@include font(14px);
+				}
+			}
+		}
+	}
+}

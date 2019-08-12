@@ -7,6 +7,7 @@
 		text-align: center;
 	}
 
+
 	// Scrolled menu styles
 	&.scroll_menu {
 		
@@ -18,14 +19,26 @@
 			vertical-align: bottom;
 			float: none;
 		}
-		.navbar-brand {
-			//@include iconBg('../images/brand/logo.svg', 218px);
-			width: rem(218px);
-			height: rem(83px);
+		.navbar-brand {			
+			width: rem(208px);
+			height: rem(63px);
 			margin: rem(12px); 
 			display: inline-block;
 			vertical-align: bottom;
-			float: none;		
+			float: none;
+			@include mq('md') {
+				width: rem(328px);
+			}	
+		}
+
+		#logo-svg {
+			display: block;
+			width: rem(155px);
+			height: rem(33px);
+			@include mq('md') {
+				width: rem(328px);
+				height: rem(81px);
+			}
 		}
 	}
 
@@ -73,6 +86,33 @@
 						a {
 							background-color: transparent;
 						}					
+					}
+				}
+			}
+		}
+	}
+}
+
+body {
+	&.home,
+	&.front {
+		.navbar {
+			position: fixed;
+			background-color: transparent;
+			margin: 0 0 0 0;
+			border: none;
+			top: 0;
+			left: 0;
+			width: 100%;
+
+			.navbar-collapse {
+				ul {
+					&.navbar-nav {
+					> li {
+							a {
+								color: $white;
+							}
+						}
 					}
 				}
 			}

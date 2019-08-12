@@ -26,7 +26,9 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="<?php echo home_url('/'); ?>"><?php bloginfo('name'); ?></a>
+        <a class="navbar-brand" href="<?php echo home_url('/'); ?>">
+          <h1 id="logo-svg"></h1>
+        </a>
       </div>
       <div class="collapse navbar-collapse" id="navbar"> 
         <?php

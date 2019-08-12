@@ -5,6 +5,7 @@
 		// Constructor
 		init: function() {
 			this.menuScripts();
+			this.svgScripts();
 		},
 
 		// scripts for Menu
@@ -21,6 +22,20 @@
 				}
 			});
 		},
+
+		// scripts for SVG Animations
+		svgScripts: function() {
+			let LogoSource = $('#logo-svg');
+			if(LogoSource.length) {
+				new Vivus('logo-svg', {
+					file: '/wp-content/themes/pisardi-theme/images/logo.svg',
+					onReady: function (myVivus) {
+					// `el` property is the SVG element
+						//myVivus.el.setAttribute('height', 'auto');
+					}
+				});
+			}			
+		},
 	}
 
 	// -- Home -- //
@@ -30,17 +45,54 @@
 		init: function() {
 			// Instance functions
 			this.homeSlider();
-			this.homePartners();
 		},
 
 
 		// scripts for banner
 		homeSlider: function() {
-			
-		},
+			let $SliderWrapper = $('.hero-slider');
+			let $SliderItems   = $SliderWrapper.find('.hero-slider__row');
+			let $SlidesOpts = {
+				dots: true,
+				arrows: false,
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				vertical: true,
+				lazyLoad: 'ondemand',
+				responsive: [
+					{
+						breakpoint: 1024,
+						settings: {
+							vertical: false,
+							infinite: true,
+							dots: true
+						}
+					},
+				]
+			}
 
-		homePartners: function() {
-			
+			function mouseWheel($slider) {
+				$(window).on('wheel', { $slider: $slider }, mouseWheelHandler)
+			}
+
+			function mouseWheelHandler(event) {
+				event.preventDefault()
+				const $slider = event.data.$slider
+				const delta = event.originalEvent.deltaY
+				if(delta > 0) {
+					$slider.slick('slickPrev')
+				}
+				else {
+					$slider.slick('slickNext')
+				}
+			}
+
+			if($SliderItems.length > 0) {
+				let $sliderHome = $SliderWrapper.slick($SlidesOpts);
+				if($(window).width() > 1024){
+					mouseWheel($sliderHome);
+				}
+			}
 		},
 	}
 
