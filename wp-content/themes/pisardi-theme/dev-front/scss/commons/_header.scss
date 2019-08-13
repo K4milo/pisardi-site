@@ -21,8 +21,8 @@
 		}
 		.navbar-brand {			
 			width: rem(208px);
-			height: rem(63px);
-			margin: rem(12px); 
+			height: rem(13px);
+			margin: rem(5px) 0 0 0; 
 			display: inline-block;
 			vertical-align: bottom;
 			float: none;
@@ -32,9 +32,10 @@
 		}
 
 		#logo-svg {
+			margin: 0 0;
 			display: block;
-			width: rem(155px);
-			height: rem(33px);
+			width: rem(195px);
+			height: rem(73px);
 			@include mq('md') {
 				width: rem(328px);
 				height: rem(81px);
