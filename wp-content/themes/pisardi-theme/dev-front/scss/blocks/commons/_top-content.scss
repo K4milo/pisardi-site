@@ -1,0 +1,18 @@
+.content-deault {
+	&__wrapper {
+		padding: rem(40px) rem(20px);
+		text-align: center;
+		@include mq('md') {
+			padding: rem(80px);	
+		}
+		p {
+			color: $gray;
+			@include font(14px);
+			line-height: 2;
+			display: block;
+			max-width: rem(774px);
+			margin: rem(20px) auto;
+			font-family: $op;
+		}
+	}
+}

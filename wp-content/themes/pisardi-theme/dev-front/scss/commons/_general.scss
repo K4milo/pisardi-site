@@ -35,4 +35,12 @@ body {
 			}
 		}
 	}
+
+	// Home hide footer
+	&.home {
+		.pre-footer-widgets,
+		footer {
+			display: none;
+		}
+	}
 }

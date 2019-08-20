@@ -40,12 +40,11 @@
 		&__row {
 			margin: 0 0;
 			@include bgcover;
-			min-height: 90vh;
+			min-height: 100vh;
 			position: relative;
 			background-position: top center;
 			padding: rem(25px);
-			@include mq('md') {
-				min-height: 100vh;
+			@include mq('md') {				
 				padding: rem(80px);
 			} 
 			&::after {

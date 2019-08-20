@@ -27,7 +27,8 @@
           <span class="icon-bar"></span>
         </button>
         <a class="navbar-brand" href="<?php echo home_url('/'); ?>">
-          <h1 id="logo-svg"></h1>
+          <h1 class="brand-image">Pisardi Arquitectos</h1>
+          <div id="logo-svg"></div>
         </a>
       </div>
       <div class="collapse navbar-collapse" id="navbar"> 

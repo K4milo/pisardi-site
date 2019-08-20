@@ -2,9 +2,18 @@
 	position: relative;
 	margin: 0 0 0 0;
 	border: none;
+	background-color: $white;
 	@include mq('sm') {
-		padding: rem(20px) 0;
+		padding: 0 0;
 		text-align: center;
+	}
+
+	.row-header {
+		@include mq('sm') {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
 	}
 
 
@@ -13,33 +22,32 @@
 		
 	}
 
+	&-brand {
+		height: auto;
+	}
+
 	.navbar-header {
 		@include mq('sm') {
 			display: inline-block !important;
 			vertical-align: bottom;
 			float: none;
 		}
-		.navbar-brand {			
+		.brand-image {			
 			width: rem(208px);
-			height: rem(13px);
+			height: rem(43px);
 			margin: rem(5px) 0 0 0; 
 			display: inline-block;
 			vertical-align: bottom;
 			float: none;
+			@include iconBg('../images/brand/logo-black.svg');
 			@include mq('md') {
-				width: rem(328px);
+				width: rem(285px);
+				height: rem(72px);
 			}	
 		}
 
 		#logo-svg {
-			margin: 0 0;
-			display: block;
-			width: rem(195px);
-			height: rem(73px);
-			@include mq('md') {
-				width: rem(328px);
-				height: rem(81px);
-			}
+			display: none;
 		}
 	}
 
@@ -105,6 +113,23 @@ body {
 			top: 0;
 			left: 0;
 			width: 100%;
+			&-brand {
+				.brand-image {
+					display: none;
+				}
+			}
+			&-header {
+				#logo-svg {
+					margin: 0 0;
+					display: block;
+					width: rem(195px);
+					height: rem(73px);
+					@include mq('md') {
+						width: rem(328px);
+						height: rem(81px);
+					}
+				}
+			}
 
 			.navbar-collapse {
 				ul {
