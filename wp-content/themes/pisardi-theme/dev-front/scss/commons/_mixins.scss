@@ -200,6 +200,23 @@ $browser-context: 16; // Default
 }
 
 // Buttons
+@mixin defBtn($size: 17px, $font: 12px, $bg: $black, $color: $white) {
+  color: $color;
+  border: none;
+  display: inline-block;
+  border-radius: 50px;
+  padding: $size 60px;
+  background-color: $bg;
+  font-size: $font;
+  font-family: $m-bd;
+  letter-spacing: 2.4px;
+  text-transform: uppercase;
+  &:hover {
+    color: $bg;
+    background-color: $color;
+  }
+}
+
 @mixin yellowBtn($size: 16px, $font: 20px) {
   color: $white;
   display: inline-block;

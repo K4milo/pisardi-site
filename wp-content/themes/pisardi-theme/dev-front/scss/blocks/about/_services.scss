@@ -1,20 +1,73 @@
 .services {
 	// header
 	&__top {
-
+		text-align: center;
+		padding: rem(20px);
+		@include mq('md') {
+			padding: rem(40px) 0;
+		}
+		h2 {
+			display: inline-block;
+			line-height: 1;
+			@include font(25px);
+			@include mq('md') {
+				@include font(100px);
+			}
+		}
 	}
 	// wrapper content
 	&__wrapper {
-
+		@include wrapper;
+		@include mq('md') {
+			display: flex;
+			flex-wrap: wrap;
+			justify-items: center;
+		}
 	}
 
 	&__item {
+		text-align: center;
+		padding: rem(40px);
+		@include mq('md') {
+			width: 50%;
+			padding: 0 rem(60px) rem(60px);
+		}
 		&-thumb {
-
+			padding: rem(16px);
+			img {
+				display: inline-block;
+				max-width: rem(80px);
+				@include mq('md') {
+					max-width: rem(120px);
+				}
+			}
 		}
 		&-text {
+			display: block;
+			max-width: rem(410px);
+			margin: rem(16px) auto;
+			text-align: center;
+			h3 {
+				@include font(12px);
+				font-family: $m-bd;
+				letter-spacing: rem(1px);
+				display: inline-block;
+				text-transform: uppercase;
+				@include mq('md') {
+					letter-spacing: rem(2px);
+					@include font(18px);
+				}
+			}
 			&__caption {
-				
+				p {
+					@include font(14px);
+					font-family: $op;
+					line-height: 2;
+					color: $gray;
+					@include mq('md') {
+						@include font(18px);
+					}
+				}
 			}
 		}
 	}

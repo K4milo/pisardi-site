@@ -13,15 +13,17 @@
 		
 		// Text Footer
 		.text-2 {
+			padding: rem(40px);
 			@include mq('md') {
 				width: 50%;
+				padding: 0 rem(80px);
 			}
 			h4 {
 				margin-top: 0;
 				@include font(32px);
 				line-height: 1;
 				@include mq('md') {
-					@include font(60px);
+					@include font(45px);
 				}
 			}
 			.textwidget {
@@ -42,6 +44,8 @@
 						padding-left: rem(35px);
 						position: relative;
 						line-height: 2;
+						color: $white;
+						@include font(14px);
 						&::before {
 							content: "";
 							width: rem(18px);
@@ -94,6 +98,15 @@
 						width: 13%;
 					}
 				}
+
+				&__email,
+				&__textfield,
+				&__textarea {
+					@include mq('md') {
+						width: 76%;
+					}
+				}
+
 				&__email,
 				&__textfield {
 					input {
@@ -116,8 +129,11 @@
 				}
 			}
 			.form-actions {
+				text-align: right;
+				.btn,
+				input,
 				button {
-
+					@include defBtn(rem(17px),rem(12px),$gray,$black);
 				}
 			}
 		}
