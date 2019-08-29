@@ -79,7 +79,7 @@
 				event.preventDefault()
 				const $slider = event.data.$slider
 				const delta = event.originalEvent.deltaY
-				if(delta > 0) {
+				if(delta < 0) {
 					$slider.slick('slickPrev')
 				}
 				else {

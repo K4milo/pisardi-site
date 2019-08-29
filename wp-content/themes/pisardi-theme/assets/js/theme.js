@@ -151,7 +151,7 @@
 				event.preventDefault();
 				var $slider = event.data.$slider;
 				var delta = event.originalEvent.deltaY;
-				if (delta > 0) {
+				if (delta < 0) {
 					$slider.slick('slickPrev');
 				} else {
 					$slider.slick('slickNext');

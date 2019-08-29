@@ -1,5 +1,6 @@
 .hero {
 	&-slider {
+		border: none;
 		margin: 0 0;
 		&.slick-dotted.slick-slider {
 			margin-bottom: 0;
@@ -39,6 +40,7 @@
 		// Slide items
 		&__row {
 			margin: 0 0;
+			border: none;
 			@include bgcover;
 			min-height: 100vh;
 			position: relative;

@@ -1,0 +1,22 @@
+.hero-banner {
+    position: relative;
+    @include bgcover();
+    min-height: 100vh;
+    padding-top: 30vh;
+    @include mq('md'){
+        padding-top: rem(250px);
+        min-height: rem(520px);
+    }
+    &__caption {
+        @include wrapper;
+        max-width: rem(960px);
+        h2 {
+            color: $white;
+            @include font(35px);
+            margin: 0 0;
+            @include mq('md') {
+                @include font(60px);
+            }
+        }
+    }
+}
