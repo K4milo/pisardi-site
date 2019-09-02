@@ -178,18 +178,16 @@
 
 		// scripts for banner
 		gallerySlider: function gallerySlider() {
-			var $SliderWrapper = $('.gallery-slider');
-			var $SliderItems = $SliderWrapper.find('.gallery-slider__row');
+			var $SliderItems = $('.top-slider');
 			var $SlidesOpts = {
 				dots: true,
 				arrows: false,
 				slidesToShow: 1,
-				slidesToScroll: 1,
-				vertical: true
+				slidesToScroll: 1
 			};
 
 			if ($SliderItems.length > 0) {
-				$SliderWrapper.slick($SlidesOpts);
+				$SliderItems.slick($SlidesOpts);
 			}
 		}
 	};
@@ -200,6 +198,11 @@
 	// Home Scripts
 	if ($('body').hasClass('home')) {
 		$HomeScope.init();
+	}
+
+	// Single Scripts
+	if ($('body').hasClass('single-post')) {
+		$SingleScope.init();
 	}
 })(jQuery);
 

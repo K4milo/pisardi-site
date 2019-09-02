@@ -1,0 +1,63 @@
+.content-blog {
+	padding: rem(54px);
+	@include mq('sm') {
+		padding: rem(94px) 0 rem(46px);
+	}
+	&__header {
+		text-align: center;
+		color: $gray;
+		time {
+			@include font(11px);
+			@include mq('sm') {
+				@include font(14px);
+			}
+		}
+		h2 {
+			color: $black;
+			@include font(40px);
+			margin: rem(40px) 0;
+			@include mq('sm') {
+				@include font(48px);
+			}
+		}
+		h3 {
+			font-family: $m-bd;
+			@include font(10px);
+			@include mq('sm') {
+				@include font(12px);
+			}
+		}
+	}
+	&__wrapper {
+		p {
+			font-size: rem(13px);
+			color: $gray;
+			line-height: 2;
+			@include mq('sm') {
+				@include font(16px);
+			}
+		}
+	}
+}
+
+// Aditional content
+.add-content-blog {
+	padding: rem(54px);
+	@include mq('sm') {
+		padding: rem(68px) 0;
+	}
+	&__wrapper {
+		@include mq('sm') {
+			column-count: 2;
+			column-gap: rem(40px);
+		}
+		p {
+			font-size: rem(13px);
+			color: $gray;
+			line-height: 2;
+			@include mq('sm') {
+				@include font(16px);
+			}
+		}
+	}
+}

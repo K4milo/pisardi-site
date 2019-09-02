@@ -1,0 +1,61 @@
+.top {
+	&-slider {
+		border: none;
+		margin: 0 0;
+		&.slick-dotted.slick-slider {
+			margin-bottom: 0;
+		}
+		// Slide controls
+		.slick-dots {
+			bottom: rem(20px);
+			z-index: 3;			
+			li {
+				display: inline-block;
+				vertical-align: middle;
+				margin: rem(7px) rem(6px);
+				width: rem(15px);
+				height: rem(15px);
+				border-radius: 100%;
+				background-color: rgba($white,0.5);
+				transition: all 0.34s;
+				&.slick-active {
+					width: rem(20px);
+					height: rem(20px);
+					background-color: $white;
+				}
+			}
+		}
+
+
+		// Slide items
+		&__row {
+			margin: 0 0;
+			border: none;
+			@include bgcover;
+			min-height: rem(430px);
+			position: relative;
+			padding: rem(25px);
+			@include mq('md') {				
+				min-height: rem(720px);
+			} 
+			&::after {
+				content: "";
+				@include coverAbsolute(1);
+				background-color: rgba($black, 0.25);
+			}
+		}
+
+		&__caption {
+			@include center('both');
+			width: 75%;
+			max-width: rem(640px);
+			z-index: 2;
+			text-align: center;
+			font-family: $ar;
+			@include mq('md') {
+				width: 50%;
+				right: rem(80px);
+			}
+		}
+	}
+}

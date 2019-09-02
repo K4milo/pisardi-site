@@ -108,18 +108,16 @@
 
 		// scripts for banner
 		gallerySlider: function() {
-			let $SliderWrapper = $('.gallery-slider');
-			let $SliderItems   = $SliderWrapper.find('.gallery-slider__row');
+			let $SliderItems   = $('.top-slider');
 			let $SlidesOpts = {
 				dots: true,
 				arrows: false,
 				slidesToShow: 1,
-				slidesToScroll: 1,
-				vertical: true
+				slidesToScroll: 1
 			}
 
 			if($SliderItems.length > 0) {
-				$SliderWrapper.slick($SlidesOpts);
+				$SliderItems.slick($SlidesOpts);
 			}
 		},
 	}
@@ -131,5 +129,11 @@
 	if($('body').hasClass('home')) {
 		$HomeScope.init();
 	}
+
+	// Single Scripts
+	if($('body').hasClass('single-post')) {
+		$SingleScope.init();
+	}
+
 
 })(jQuery);
