@@ -1,0 +1,23 @@
+.product__wrapper{
+	&--item {
+		width: 25vw;
+		min-height: rem(320px);
+		position: relative;
+		figure {
+			@include bgcover;
+			@include coverAbsolute(2);
+			text-align: center;
+			padding: rem(20px);
+			@include mq('md'){
+				padding: rem(40px);
+			}
+			h3 {
+				@include center('both');
+				color: $white;
+			}
+		}
+		&:nth-child(3n) {
+			width: 50vw;
+		}
+	}
+}

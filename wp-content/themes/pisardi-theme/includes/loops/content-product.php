@@ -1,0 +1,48 @@
+<?php
+
+	/*
+		Fields
+			project_gallery
+				project_gallery_img
+				project_gallery_txt
+	
+	*/
+
+	$project_gallery = get_field('project_gallery');
+	$gallery_text_top = get_field('gallery_text_top');
+
+	if(have_posts()): while(have_posts()): the_post();
+?>
+	<article role="article" id="post_<?php the_ID()?>" <?php post_class()?>>
+		<div class="project-top">
+			<div class="project-top__content">
+				<h2><?php the_title(); ?></h2>
+				<?php the_content(); ?>
+			</div>
+			<?php if($project_gallery): ?>
+				<div class="project-top__gallery">
+					
+					<?php while(have_rows('project_gallery')):the_row();
+
+						$project_gallery_img = get_sub_field('project_gallery_img');
+						$project_gallery_txt = get_sub_field('project_gallery_txt');
+						$size = 'large';
+						$thumb = $project_gallery_img['sizes'][$size];
+					?>
+
+					<figure class="project-top__gallery--item__photo" style="background-image: url(<?php echo $thumb; ?>)"></figure>
+
+					<?php endwhile; ?>
+
+					<?php if($gallery_text_top): ?>
+						<div class="project-top__gallery--item__text">
+							<?php echo $gallery_text_top; ?>
+						</div>
+					<?php endif;?>
+
+				</div>
+			<?php endif; ?>
+		</div>
+	</article>
+
+<?php endwhile; endif; 

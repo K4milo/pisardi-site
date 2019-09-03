@@ -17,6 +17,7 @@
 // ------------------------ //
 // -- Loops -- //
 // ------------------------ //
+@import 'components/product-related';
 
 // ------------------------ //
 // -- Blocks -- //
@@ -32,6 +33,10 @@
 // -- Components -- //
 // ------------------------ //
 @import 'components/hero-banner';
+
+// Product single styles
+@import 'components/product-top';
+@import 'components/product-slider';
 
 // ------------------------ //
 // -- Pages -- //

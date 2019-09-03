@@ -192,6 +192,47 @@
 		}
 	};
 
+	// -- SingleProduct -- //
+	var $SingleProductScope = {
+
+		// Constructor
+		init: function init() {
+			// Instance functions
+			this.gallerySlider();
+			this.relatedPost();
+		},
+
+		// scripts for banner
+		gallerySlider: function gallerySlider() {
+			var $SliderItems = $('.bottom-slider');
+			var $SlidesOpts = {
+				dots: true,
+				arrows: false,
+				slidesToShow: 1,
+				slidesToScroll: 1
+			};
+
+			if ($SliderItems.length > 0) {
+				$SliderItems.slick($SlidesOpts);
+			}
+		},
+
+		relatedPost: function relatedPost() {
+			var $PostItems = $('.product__wrapper');
+			var $Opts = {
+				dots: false,
+				arrows: true,
+				slidesToShow: 3,
+				slidesToScroll: 3,
+				variableWidth: true
+			};
+
+			if ($PostItems.length > 0) {
+				$PostItems.slick($Opts);
+			}
+		}
+	};
+
 	// Trigger
 	$GeneralScope.init();
 
@@ -203,6 +244,11 @@
 	// Single Scripts
 	if ($('body').hasClass('single-post')) {
 		$SingleScope.init();
+	}
+
+	// Single Product Scripts
+	if ($('body').hasClass('single-proyectos')) {
+		$SingleProductScope.init();
 	}
 })(jQuery);
 

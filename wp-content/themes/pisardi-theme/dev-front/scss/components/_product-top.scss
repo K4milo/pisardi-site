@@ -1,0 +1,63 @@
+.project-top {
+	display: block;
+	@include mq('md'){
+		display: flex;
+		flex-wrap: wrap;
+	}
+	&__content {
+		padding: rem(28px);
+		background-color: $white;
+		@include mq('md'){
+			width: 50%;
+			background-color: $bones;
+			padding: rem(80px);
+		}
+		h2 {
+			@include font(30px);
+			margin-bottom: rem(20px);			
+			@include mq('md'){
+				display: inline-block;
+				max-width: 60%;
+				line-height: 1;
+				margin-bottom: rem(35px);
+				@include font(60px);
+			}
+		}
+		p {
+			max-width: rem(420px);
+			line-height: 2;
+			color: $gray;
+		}
+	}
+	&__gallery {
+		min-height: rem(320px);
+		@include mq('md'){
+			width: 50%;
+			display: flex;
+			flex-wrap: wrap;
+		}
+		&--item {			
+			&__photo {
+				position: relative;
+				min-height: rem(320px);
+				@include bgcover;
+				@include mq('md'){
+					width: 50%;
+				}				
+			}
+			&__text {
+				padding: rem(28px);
+				text-align: center;
+				@include mq('md'){
+					width: 50%;
+				}
+
+				a {
+					margin-top: rem(16px);
+					@include defBtn(rem(10px), rem(12px), $white, $black);
+					border: rem(2px) solid $wheat;
+				}	
+			}
+		}
+	}
+}
