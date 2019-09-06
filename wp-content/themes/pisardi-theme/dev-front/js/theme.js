@@ -53,17 +53,17 @@
 			let $SliderWrapper = $('.hero-slider');
 			let $SliderItems   = $SliderWrapper.find('.hero-slider__row');
 			let $SlidesOpts = {
+				fade: true,
 				dots: true,
 				arrows: false,
 				slidesToShow: 1,
 				slidesToScroll: 1,
-				vertical: true,
-				lazyLoad: 'ondemand',
+				autoplay: true,
+				autoplaySpeed: 4000,
 				responsive: [
 					{
 						breakpoint: 1024,
 						settings: {
-							vertical: false,
 							infinite: true,
 							dots: true
 						}
@@ -71,27 +71,8 @@
 				]
 			}
 
-			function mouseWheel($slider) {
-				$(window).on('wheel', { $slider: $slider }, mouseWheelHandler)
-			}
-
-			function mouseWheelHandler(event) {
-				event.preventDefault()
-				const $slider = event.data.$slider
-				const delta = event.originalEvent.deltaY
-				if(delta < 0) {
-					$slider.slick('slickPrev')
-				}
-				else {
-					$slider.slick('slickNext')
-				}
-			}
-
 			if($SliderItems.length > 0) {
 				let $sliderHome = $SliderWrapper.slick($SlidesOpts);
-				if($(window).width() > 1024){
-					mouseWheel($sliderHome);
-				}
 			}
 		},
 	}

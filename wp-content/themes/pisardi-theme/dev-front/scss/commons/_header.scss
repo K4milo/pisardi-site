@@ -80,6 +80,7 @@
 					@include mq('sm') {
 						text-align: left;
 						display: inline-block;
+						margin: 0 rem(10px);
 						vertical-align: middle;
 						float: none;
 					}
@@ -89,6 +90,7 @@
 						&:hover,
 						&:focus {
 							background-color: transparent;
+							color: $yellow;
 						}
 					}
 					&.active {				
@@ -109,25 +111,23 @@ body {
 			position: fixed;
 			background-color: transparent;
 			margin: 0 0 0 0;
+			padding: rem(25px);
 			border: none;
 			top: 0;
 			left: 0;
 			width: 100%;
+			@include background-gradient(rgba($black,1), rgba($black,0), 'vertical');
+			@include mq('sm') {
+				padding: rem(45px);
+			}
 			&-brand {
 				.brand-image {
-					display: none;
+					background-image: url('../images/brand/logotipo.svg');
 				}
 			}
 			&-header {
 				#logo-svg {
-					margin: 0 0;
-					display: block;
-					width: rem(195px);
-					height: rem(73px);
-					@include mq('md') {
-						width: rem(328px);
-						height: rem(81px);
-					}
+					display: none;
 				}
 			}
 

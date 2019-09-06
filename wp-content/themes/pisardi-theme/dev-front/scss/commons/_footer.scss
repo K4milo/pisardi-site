@@ -140,6 +140,94 @@
 	}
 }
 
+// Site footer
+.site-footer {
+	position: relative;
+	font-family: $m;
+	&__logo {		
+		width: rem(208px);
+		height: rem(43px);
+		margin: 0 0 rem(25px); 
+		display: inline-block;
+		@include iconBg('../images/brand/logotipo.svg');
+		@include mq('md') {
+			margin: 0 0 rem(40px);
+			width: rem(285px);
+			height: rem(72px);
+		}		
+	}
+
+	&-widgets {
+		text-align: center;
+		background-color: $black-lt;
+		padding: rem(20px);
+		@include mq('md') {
+			padding: rem(40px);
+		}
+
+		.widget_custom_html {
+			a {
+				color: $white;
+				text-align: center;
+				display: inline-block;
+				margin: rem(25px) 0; 
+				letter-spacing: 2px;
+				@include font(12px);
+				@include mq('md') {
+					@include font(14px);
+					margin: 0 0 rem(50px);
+				}
+			}
+		}
+
+		.widget_nav_menu {
+			h4 {
+				display: none;
+			}
+			ul {
+				padding: 0 0;
+				text-align: center;
+				li {
+					display: inline-block;
+					margin: 0 rem(16px);
+					a {
+						display: block; 
+						width: rem(20px);
+						height: rem(20px);
+					}
+					&.fb {
+						a {
+							@include iconBg('../images/icons/facebook.svg');
+						}
+					}
+					&.ins {
+						a {
+							@include iconBg('../images/icons/instagram.svg');
+						}
+					}
+					&.lin {
+						a {
+							@include iconBg('../images/icons/linkedin.svg');
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&-year {
+		padding: rem(25px);
+		background-color: $black;
+		color: $gray;
+		a {
+			color: $gray;
+		}
+		p {
+			@include font(12px);
+		}
+	}
+}
+
 // Contact page
 body {
 	&.page-template-templates_contacto-tpl-php {

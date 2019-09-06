@@ -12,7 +12,7 @@
 			@include mq('md') {
 				width: rem(30px);
 				@include center('vertical');
-				left: rem(80px);
+				left: rem(30px);
 				bottom: unset;
 			}
 			li {
@@ -46,6 +46,7 @@
 			position: relative;
 			background-position: top center;
 			padding: rem(25px);
+			opacity: 1;
 			@include mq('md') {				
 				padding: rem(80px);
 			} 

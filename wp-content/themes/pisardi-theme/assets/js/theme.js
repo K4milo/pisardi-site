@@ -127,42 +127,24 @@
 			var $SliderWrapper = $('.hero-slider');
 			var $SliderItems = $SliderWrapper.find('.hero-slider__row');
 			var $SlidesOpts = {
+				fade: true,
 				dots: true,
 				arrows: false,
 				slidesToShow: 1,
 				slidesToScroll: 1,
-				vertical: true,
-				lazyLoad: 'ondemand',
+				autoplay: true,
+				autoplaySpeed: 4000,
 				responsive: [{
 					breakpoint: 1024,
 					settings: {
-						vertical: false,
 						infinite: true,
 						dots: true
 					}
 				}]
 			};
 
-			function mouseWheel($slider) {
-				$(window).on('wheel', { $slider: $slider }, mouseWheelHandler);
-			}
-
-			function mouseWheelHandler(event) {
-				event.preventDefault();
-				var $slider = event.data.$slider;
-				var delta = event.originalEvent.deltaY;
-				if (delta < 0) {
-					$slider.slick('slickPrev');
-				} else {
-					$slider.slick('slickNext');
-				}
-			}
-
 			if ($SliderItems.length > 0) {
 				var $sliderHome = $SliderWrapper.slick($SlidesOpts);
-				if ($(window).width() > 1024) {
-					mouseWheel($sliderHome);
-				}
 			}
 		}
 	};

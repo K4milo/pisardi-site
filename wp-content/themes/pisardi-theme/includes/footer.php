@@ -6,6 +6,7 @@
 
 <footer class="container-fluid site-footer"> 
 	<div class="row site-footer-widgets">
+		<h2 class="site-footer__logo">Pisardi Arquitectos</h2>
 		<?php dynamic_sidebar('footer-widget-area'); ?>
 	</div>
 	<div class="row site-footer-year">
