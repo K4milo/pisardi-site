@@ -22,18 +22,14 @@
 		?>
 
 		<article class="team__item">
-			<figure class="team__item-thumb">
-				<img src="<?php echo $about_team_thumb; ?>" alt="<?php echo $about_team_name; ?>">
-			</figure>
+			<figure class="team__item-thumb" style="background-image: url('<?php echo $about_team_thumb; ?>')"></figure>
 			<div class="team__item-text">
-				<h3><?php echo $about_team_name; ?></h3>
-
-				<?php if($about_team_mail):?>
-					<a href="mailto:<?php echo $about_team_mail;?>" class="mail-link"><?php echo $about_team_mail;?></a>
-				<?php endif;?>
-				
 				<div class="team__item-text__caption">
+					<h3><?php echo $about_team_name; ?></h3>
 					<?php echo $about_team_aditional; ?>
+					<?php if($about_team_mail):?>
+						<a href="mailto:<?php echo $about_team_mail;?>" class="mail-link"><?php echo $about_team_mail;?></a>
+					<?php endif;?>
 				</div>
 			</div>
 		</article>

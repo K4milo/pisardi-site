@@ -19,8 +19,8 @@
 				display: inline-block;
 				vertical-align: middle;
 				margin: rem(7px) rem(6px);
-				width: rem(15px);
-				height: rem(15px);
+				width: rem(10px);
+				height: rem(10px);
 				border-radius: 100%;
 				background-color: rgba($white,0.5);
 				transition: all 0.34s;
@@ -29,8 +29,8 @@
 					margin: rem(10px) auto;
 				}
 				&.slick-active {
-					width: rem(20px);
-					height: rem(20px);
+					width: rem(12px);
+					height: rem(12px);
 					background-color: $white;
 				}
 			}
@@ -79,22 +79,34 @@
 			}
 			.content {
 				p {
-					color: $gray;
-					@include font(10px);
+					color: $white;
+					@include font(12px);
 					@include mq('md') {
-						@include font(14px);
+						@include font(16px);
 					}
 				}
 			}
 			a {
 				color: $yellow;
+				display: inline-block;
 				padding: rem(10px) rem(20px); 
 				text-transform: uppercase;
-				margin-top: rem(30px);
+				margin-top: rem(40px);
+				position: relative;
+				font-family: $m-bd;
 				@include font(10px);
 				@include mq('md') {
-					margin-top: rem(50px);
+					margin-top: rem(60px);
 					@include font(14px);
+				}
+				&::after {
+					content: "";
+					display: block;
+					width: rem(6px);
+					height: rem(14px);
+					@include iconBg('../images/icons/chevron-right.svg');
+					@include center('vertical');
+					right: 0;
 				}
 			}
 		}

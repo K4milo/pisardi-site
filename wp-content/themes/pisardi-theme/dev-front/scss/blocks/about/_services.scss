@@ -30,15 +30,32 @@
 		padding: rem(40px);
 		@include mq('md') {
 			width: 50%;
+			min-height: rem(520px);
 			padding: 0 rem(60px) rem(60px);
 		}
 		&-thumb {
-			padding: rem(16px);
+			width: rem(116px);
+			min-height: rem(120px);
+			position: relative;
+			display: inline-block;
+			&::after {
+				content:"";
+				width: rem(100px);
+				height: rem(100px);
+				border-radius: 100%;
+				background-color: $bones;
+				position: absolute;
+				bottom: rem(-10px);
+				left: rem(-4px);
+			}
 			img {
 				display: inline-block;
-				max-width: rem(80px);
+				width: rem(80px);
+				height: auto;
+				position: relative;
+				z-index: 1;
 				@include mq('md') {
-					max-width: rem(120px);
+					width: rem(100px);
 				}
 			}
 		}
@@ -55,7 +72,7 @@
 				text-transform: uppercase;
 				@include mq('md') {
 					letter-spacing: rem(2px);
-					@include font(18px);
+					@include font(20px);
 				}
 			}
 			&__caption {

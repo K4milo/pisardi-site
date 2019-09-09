@@ -86,7 +86,9 @@
 					}
 					a {
 						padding: 0 rem(4px);
-						
+						font-family: $m;
+						@include font(14px);
+						text-transform: uppercase;
 						&:hover,
 						&:focus {
 							background-color: transparent;
