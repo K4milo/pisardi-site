@@ -6,6 +6,8 @@
 	&__header {
 		text-align: center;
 		color: $gray;
+		@include wrapper;
+		max-width: rem(640px);
 		time {
 			@include font(11px);
 			@include mq('sm') {
@@ -29,6 +31,8 @@
 		}
 	}
 	&__wrapper {
+		@include wrapper;
+		max-width: rem(640px);
 		p {
 			font-size: rem(13px);
 			color: $gray;

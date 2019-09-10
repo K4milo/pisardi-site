@@ -9,6 +9,7 @@
 	*/
 
 	$project_gallery = get_field('project_gallery');
+	$project_number = get_field('project_number');
 	$gallery_text_top = get_field('gallery_text_top');
 
 	if(have_posts()): while(have_posts()): the_post();
@@ -18,30 +19,35 @@
 			<div class="project-top__content">
 				<h2><?php the_title(); ?></h2>
 				<?php the_content(); ?>
+				<span class="number"><?php echo $project_number ?></span>
 			</div>
 			<?php if($project_gallery): ?>
 				<div class="project-top__gallery">
-					
-					<?php while(have_rows('project_gallery')):the_row();
+					<div class="project-top__gallery--wrapper">
+						<?php while(have_rows('project_gallery')):the_row();
 
-						$project_gallery_img = get_sub_field('project_gallery_img');
-						$project_gallery_txt = get_sub_field('project_gallery_txt');
-						$size = 'large';
-						$thumb = $project_gallery_img['sizes'][$size];
-					?>
-
-					<figure class="project-top__gallery--item__photo" style="background-image: url(<?php echo $thumb; ?>)"></figure>
-
-					<?php endwhile; ?>
-
-					<?php if($gallery_text_top): ?>
-						<div class="project-top__gallery--item__text">
-							<?php echo $gallery_text_top; ?>
+							$project_gallery_img = get_sub_field('project_gallery_img');
+							$project_gallery_txt = get_sub_field('project_gallery_txt');
+							$size = 'large';
+							$thumb = $project_gallery_img['sizes'][$size];
+						?>
+						<div class="project-top__gallery--item">
+							<figure class="project-top__gallery--item__photo" style="background-image: url(<?php echo $thumb; ?>)"></figure>
 						</div>
-					<?php endif;?>
+						<?php endwhile; ?>
 
+
+						<?php /* if($gallery_text_top): ?>
+							<div class="project-top__gallery--item__text">
+								<?php echo $gallery_text_top; ?>
+							</div>
+						<?php endif; */?>
+					</div>
 				</div>
 			<?php endif; ?>
+		</div>
+		<div class="project-footer">
+			<a href="/proyectos/">Volver a proyectos</a>
 		</div>
 	</article>
 

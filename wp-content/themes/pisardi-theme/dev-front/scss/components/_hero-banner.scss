@@ -2,10 +2,10 @@
     position: relative;
     @include bgcover();
     min-height: 100vh;
-    padding-top: 30vh;
+    padding: 30vh 0;
     @include mq('md'){
-        padding-top: rem(250px);
-        min-height: rem(520px);
+        padding: rem(470px) 0 rem(120px);
+        min-height: rem(820px);
     }
     &__caption {
         @include wrapper;
@@ -16,6 +16,7 @@
             margin: 0 0;
             @include mq('md') {
                 @include font(60px);
+                max-width: rem(480px);
             }
         }
     }

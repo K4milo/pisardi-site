@@ -1,0 +1,123 @@
+.projects {
+	display: block;
+	@include mq(md) {
+		display: flex;
+		flex-wrap: wrap;	
+	}
+	
+	&__content {
+		display: block;
+		padding: rem(40px);
+		background-color: $white-f7;
+		position: relative;
+		@include mq(md) {
+			width: 30%;
+		}
+		&--text {
+			text-align: center;
+			@include mq(md) {
+				text-align: left;
+				@include center('both');
+			}			
+		}
+
+		h2 {
+			@include font(40px);
+		}
+		p {
+			@include font(14px);
+			line-height: 2;
+			color: $gray;
+		}
+	}
+	&__gallery {
+		display: block;
+		padding: rem(20px);
+		background-color: $blue-dk;
+		@include mq(md) {
+			display: flex;
+			flex-wrap: wrap;
+			padding: 0 0;
+			width: 70%;
+		}
+		&--item {
+			min-height: rem(320px);
+			background-color: $black;
+			position: relative;
+			@include mq(md) {
+				width: 33.3%;
+			}
+			
+			figure {
+				@include coverAbsolute(1);
+				@include bgcover;
+				.glass-icon {
+					display: none;
+					width: rem(94px);
+					height: rem(94px);
+					border-radius: 100%;
+					background-color: rgba($wheat,0.8);
+					@include center('both');
+					&::after {
+						content:"";
+						width: rem(39px);
+						height: rem(39px);
+						display: block;
+						@include iconBg('../images/icons/zoom-in.png');
+						@include center('both');
+						z-index: 2;
+					}
+				}
+			}
+
+			&__caption {
+				@include coverAbsolute(2);
+				background-color: rgba($blue-dk,0.65);
+				opacity: 1;
+				transition: all 0.4s;
+				padding: rem(20px);
+				@include mq(md) {
+					padding: rem(40px);
+				}
+				&-header {
+					font-family: $m;
+					span {
+						color: $wheat;
+						@include font(40px);
+					}
+					h3 {
+						margin-top: 0;
+						color: $white;
+						font-family: $m;
+						@include font(17px);
+						text-transform: uppercase;
+					}
+				}
+
+				h5 {
+					color: $white;
+					font-family: $m;
+					@include font(10px);
+					text-transform: uppercase;
+					transform: rotate(90deg);
+					position: absolute;
+					bottom: rem(100px);
+					right: rem(-50px);
+					min-width: rem(170px);
+					text-align: right;
+				}
+			}
+
+			&:hover {
+				figure {
+					.glass-icon {
+						display: block;
+					}
+				}
+				.projects__gallery--item__caption {
+					opacity: 0;
+				}
+			}
+		}
+	}
+}

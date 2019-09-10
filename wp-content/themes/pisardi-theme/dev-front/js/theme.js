@@ -116,12 +116,15 @@
 
 		// scripts for banner
 		gallerySlider: function() {
-			let $SliderItems   = $('.bottom-slider');
+			let $SliderItems   = $('.project-top__gallery--wrapper');
 			let $SlidesOpts = {
+				fade: true,
 				dots: true,
 				arrows: false,
 				slidesToShow: 1,
-				slidesToScroll: 1
+				slidesToScroll: 1,
+				autoplay: true,
+				autoplaySpeed: 4000
 			}
 
 			if($SliderItems.length > 0) {

@@ -33,6 +33,28 @@ function create_posttype() {
 		)
 	);
 
+	////////////////////
+	// TAXONOMY
+	///////////////////
+
+	$media_labels_projs = array(
+	    'name' => _x( 'Tipo de proyecto', 'Tipos de proyecto' ),
+	    'singular_name' => _x( 'Tipo', 'tipo' ),
+	    'search_items' =>  __( 'Buscar Tipo de proyecto' ),
+	    'all_items' => __( 'Todas los tipo de proyecto' )
+	); 
+
+	register_taxonomy('tipo-proyecto',array('proyectos'), array(
+	    'hierarchical' => true,
+	    'labels' => $media_labels_projs,
+	    'show_ui' => true,
+	    'show_admin_column' => true,
+	    'show_in_rest' => true,
+	    'rest_base' => 'tipo-proyecto',
+	    'query_var' => true,
+	    'rewrite' => array( 'slug' => 'tipo-proyecto')
+	)); 
+
 }
 
 // Hooking up our function to theme setup

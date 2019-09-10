@@ -186,12 +186,15 @@
 
 		// scripts for banner
 		gallerySlider: function gallerySlider() {
-			var $SliderItems = $('.bottom-slider');
+			var $SliderItems = $('.project-top__gallery--wrapper');
 			var $SlidesOpts = {
+				fade: true,
 				dots: true,
 				arrows: false,
 				slidesToShow: 1,
-				slidesToScroll: 1
+				slidesToScroll: 1,
+				autoplay: true,
+				autoplaySpeed: 4000
 			};
 
 			if ($SliderItems.length > 0) {

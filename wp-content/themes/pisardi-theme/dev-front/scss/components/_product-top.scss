@@ -6,58 +6,132 @@
 	}
 	&__content {
 		padding: rem(28px);
-		background-color: $white;
+		background-color: $wheat;
+		position: relative;
+		overflow: hidden;
+		.number {
+			font-family: $m-bd;
+			color: rgba($black,0.07);
+			position: absolute;
+			bottom: 0;
+			right: rem(-50px);
+			z-index: 0;
+			line-height: 0.8;
+			@include font(280px);
+			@include mq('md'){
+				@include font(480px);
+			}
+		}
 		@include mq('md'){
-			width: 50%;
-			background-color: $bones;
-			padding: rem(80px);
+			width: 40%;
+			padding: rem(127px) rem(80px);
 		}
 		h2 {
 			@include font(30px);
-			margin-bottom: rem(20px);			
+			margin-bottom: rem(20px);
+			position: relative;
+			z-index: 1;			
 			@include mq('md'){
 				display: inline-block;
 				max-width: 60%;
 				line-height: 1;
-				margin-bottom: rem(35px);
-				@include font(60px);
+				margin-bottom: rem(35px);				
+				@include font(54px);
 			}
 		}
 		p {
 			max-width: rem(420px);
+			position: relative;
+			z-index: 1;
 			line-height: 2;
-			color: $gray;
+			color: $white;
 		}
 	}
 	&__gallery {
-		min-height: rem(320px);
+		position: relative;
 		@include mq('md'){
-			width: 50%;
-			display: flex;
-			flex-wrap: wrap;
+			width: 60%;			
 		}
-		&--item {			
-			&__photo {
-				position: relative;
-				min-height: rem(320px);
-				@include bgcover;
-				@include mq('md'){
-					width: 50%;
-				}				
-			}
-			&__text {
-				padding: rem(28px);
-				text-align: center;
-				@include mq('md'){
-					width: 50%;
+		// Slide controls
+		.slick-dots {
+			bottom: rem(20px);
+			z-index: 3;
+			li {
+				display: inline-block;
+				vertical-align: middle;
+				margin: rem(7px) rem(6px);
+				width: rem(10px);
+				height: rem(10px);
+				border-radius: 100%;
+				background-color: rgba($white,0.5);
+				transition: all 0.34s;
+				&.slick-active {
+					width: rem(12px);
+					height: rem(12px);
+					background-color: $white;
 				}
-
-				a {
-					margin-top: rem(16px);
-					@include defBtn(rem(10px), rem(12px), $white, $black);
-					border: rem(2px) solid $wheat;
-				}	
 			}
 		}
+		
+		&--wrapper {
+			margin: 0 0 0 0;
+			@include mq('md'){
+				margin: 0 0 0 0;
+				@include coverAbsolute(1);	
+				min-height: 100%;
+				height: 100%;	
+			}
+			
+			&.slick-dotted {
+				margin-bottom: 0;
+			}
+
+			.slick-list{
+				@include mq('md'){
+					min-height: 100%;
+					height: 100%;
+				}
+				.slick-track {
+					@include mq('md'){
+						height: 100%;
+						min-height: 100%;	
+					}	
+				}
+			}
+		}
+	
+		@include mq('md'){
+			width: 60%;			
+		}
+		&--item {
+			position: relative;
+			min-height: rem(320px);
+			@include mq('md'){
+				min-height: 100%;
+			}
+			&__photo {
+				@include bgcover;
+				@include coverAbsolute(2);
+			}
+		}
+	}
+}
+
+.project-footer {
+	text-align: center;
+	padding: rem(20px);
+	background-color: $blue-gr;
+	@include mq('md'){
+		padding: rem(55px);
+	}
+	a {
+		display: inline-block;
+		font-family: $m;
+		color: $white;
+		text-transform: uppercase;
+		padding: rem(13px) rem(20px);
+		border: rem(2px) solid $wheat;
+		border-radius: rem(40px);
+		@include font(17px);
 	}
 }

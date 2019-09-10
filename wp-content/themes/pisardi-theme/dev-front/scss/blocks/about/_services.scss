@@ -4,14 +4,15 @@
 		text-align: center;
 		padding: rem(20px);
 		@include mq('md') {
-			padding: rem(40px) 0;
+			padding: 0;
+			margin: rem(113px) 0 rem(128px);
 		}
 		h2 {
 			display: inline-block;
-			line-height: 1;
+			line-height: 0.85;
 			@include font(25px);
 			@include mq('md') {
-				@include font(100px);
+				@include font(105px);
 			}
 		}
 	}
@@ -45,15 +46,17 @@
 				border-radius: 100%;
 				background-color: $bones;
 				position: absolute;
-				bottom: rem(-10px);
-				left: rem(-4px);
+				bottom: 0;
+				left: 0;
 			}
 			img {
-				display: inline-block;
+				display: block;
 				width: rem(80px);
 				height: auto;
-				position: relative;
+				position: absolute;
 				z-index: 1;
+				left: rem(20px);
+				bottom: rem(20px);
 				@include mq('md') {
 					width: rem(100px);
 				}

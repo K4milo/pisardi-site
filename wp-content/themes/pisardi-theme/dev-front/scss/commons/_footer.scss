@@ -230,6 +230,7 @@
 
 // Contact page
 body {
+	&.single-proyectos,
 	&.page-template-templates_contacto-tpl-php {
 		.pre-footer-widgets {
 			background-color: $white;
@@ -249,12 +250,12 @@ body {
 								}
 								&.mail {
 									&::before {
-										@include iconBg('../images/icons/mail.svg');
+										@include iconBg('../images/icons/mail-bone.svg');
 									}
 								}
 								&.phone {
 									&::before {
-										@include iconBg('../images/icons/phone.svg');
+										@include iconBg('../images/icons/phone-bones.svg');
 									}
 								}
 							}
