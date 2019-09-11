@@ -42,5 +42,40 @@ body {
 		footer {
 			display: none;
 		}
+		&.loaded {
+			.loader {
+				opacity: 0;
+				z-index: -1;
+			}
+		}
+	}
+
+	// loader 
+	.loader {
+		opacity:1;
+		transition: all 0.4s;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 1000;
+		background-color: $white;
+		&__logo {
+			width: rem(208px);
+			height: rem(153px);
+			display: block;
+			font-size: 0;
+			color: transparent;
+			@include center('both');
+			@include mq('md') {
+				width: rem(385px);
+				height: rem(262px);
+			}
+			svg {
+				width: 100%;
+				height: auto;
+			}
+		}
 	}
 }

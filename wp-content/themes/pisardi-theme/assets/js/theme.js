@@ -80,7 +80,6 @@
 		// Constructor
 		init: function init() {
 			this.menuScripts();
-			this.svgScripts();
 		},
 
 		// scripts for Menu
@@ -96,20 +95,6 @@
 					header_el.removeClass("scroll_menu");
 				}
 			});
-		},
-
-		// scripts for SVG Animations
-		svgScripts: function svgScripts() {
-			var LogoSource = $('#logo-svg');
-			if (LogoSource.length) {
-				new Vivus('logo-svg', {
-					file: '/wp-content/themes/pisardi-theme/images/logo.svg',
-					onReady: function onReady(myVivus) {
-						// `el` property is the SVG element
-						//myVivus.el.setAttribute('height', 'auto');
-					}
-				});
-			}
 		}
 	};
 
@@ -119,7 +104,31 @@
 		// Constructor
 		init: function init() {
 			// Instance functions
+			this.loader();
 			this.homeSlider();
+		},
+
+		// Loader
+		loader: function loader() {
+
+			var LogoSource = $('#logo-svg');
+
+			if (LogoSource.length) {
+
+				new Vivus('logo-svg', {
+					duration: 100,
+					file: '/wp-content/themes/pisardi-theme/images/logo-black.svg',
+					start: 'autostart',
+					onReady: function onReady(myVivus) {
+						// `el` property is the SVG element
+						//myVivus.el.setAttribute('height', "auto");
+					}
+				});
+			}
+
+			setTimeout(function () {
+				$('body').addClass('loaded');
+			}, 2500);
 		},
 
 		// scripts for banner

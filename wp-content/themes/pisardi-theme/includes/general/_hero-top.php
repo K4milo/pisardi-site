@@ -11,6 +11,9 @@
 $hero_slider = get_field('hero_slider');
 
 if($hero_slider): ?>
+	<div class="loader">
+		<h1 id="logo-svg" class="loader__logo">Pisardi Arquitectos</h1>
+	</div>
 	<section id="HeroSlider" class="hero-slider">
 		<?php
 			while(have_rows('hero_slider')): the_row(); 
