@@ -41,7 +41,7 @@
 			if(LogoSource.length) {
 
 				new Vivus('logo-svg', {
-					duration: 100,
+					duration: 50,
 					file: '/wp-content/themes/pisardi-theme/images/logo-black.svg',
 					start: 'autostart',
 					onReady: function (myVivus) {
@@ -53,7 +53,7 @@
 
 			setTimeout(function(){
 		        $('body').addClass('loaded');
-		    }, 2500);
+		    }, 1680);
 		},
 
 		// scripts for banner
