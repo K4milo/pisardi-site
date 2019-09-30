@@ -75,7 +75,7 @@
 				text-transform: uppercase;
 				@include mq('md') {
 					letter-spacing: rem(2px);
-					@include font(20px);
+					@include font(21px);
 				}
 			}
 			&__caption {
@@ -85,7 +85,7 @@
 					line-height: 2;
 					color: $gray;
 					@include mq('md') {
-						@include font(18px);
+						@include font(23px);
 					}
 				}
 			}

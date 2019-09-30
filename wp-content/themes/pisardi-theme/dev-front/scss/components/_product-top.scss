@@ -36,11 +36,12 @@
 				max-width: 60%;
 				line-height: 1;
 				margin-bottom: rem(35px);				
-				@include font(54px);
+				@include font(55px);
 			}
 		}
 		p {
 			max-width: rem(420px);
+			@include font(15px);
 			position: relative;
 			z-index: 1;
 			line-height: 2;

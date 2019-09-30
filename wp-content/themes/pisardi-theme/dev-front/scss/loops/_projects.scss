@@ -22,10 +22,10 @@
 		}
 
 		h2 {
-			@include font(40px);
+			@include font(55px);
 		}
 		p {
-			@include font(14px);
+			@include font(15px);
 			line-height: 2;
 			color: $gray;
 		}
@@ -89,7 +89,7 @@
 						margin-top: 0;
 						color: $white;
 						font-family: $m;
-						@include font(17px);
+						@include font(18px);
 						text-transform: uppercase;
 					}
 				}

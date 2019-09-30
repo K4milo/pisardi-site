@@ -117,7 +117,7 @@
 
 				new Vivus('logo-svg', {
 					duration: 50,
-					file: '/wp-content/themes/pisardi-theme/images/logo-black.svg',
+					file: '/wp-content/themes/pisardi-theme/images/logo-gold.svg',
 					start: 'autostart',
 					onReady: function onReady(myVivus) {
 						// `el` property is the SVG element

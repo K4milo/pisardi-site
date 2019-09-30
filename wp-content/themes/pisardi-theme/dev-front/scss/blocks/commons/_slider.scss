@@ -82,7 +82,7 @@
 					color: $white;
 					@include font(12px);
 					@include mq('md') {
-						@include font(16px);
+						@include font(20px);
 					}
 				}
 			}
@@ -97,7 +97,7 @@
 				@include font(10px);
 				@include mq('md') {
 					margin-top: rem(60px);
-					@include font(14px);
+					@include font(20px);
 				}
 				&::after {
 					content: "";
