@@ -1,9 +1,3 @@
-<section class="pre-footer-widgets">
-	<div class="container pre-footer-widgets__wrapper">
-		<?php dynamic_sidebar('pre-footer-widget-area'); ?>
-	</div>
-</section>
-
 <footer class="container-fluid site-footer"> 
 	<div class="row site-footer-widgets">
 		<h2 class="site-footer__logo">Pisardi Arquitectos</h2>

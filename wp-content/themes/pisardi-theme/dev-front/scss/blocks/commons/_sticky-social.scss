@@ -29,6 +29,11 @@
 					@include iconBg('../images/icons/linkedin.svg');
 				}
 			}
+			&.whatsapp {
+				a {
+					@include iconBg('../images/icons/whatsapp.svg');
+				}
+			}
 		}
 	}
 }

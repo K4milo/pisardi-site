@@ -11,5 +11,6 @@ get_template_part('includes/header');
 	get_template_part('includes/about/_team');
 
 	get_template_part('includes/about/_services');
-	
+
+get_template_part('includes/prefooter');	
 get_template_part('includes/footer');

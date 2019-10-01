@@ -19,6 +19,7 @@
 			$about_team_name = get_sub_field('about_team_name');
 			$about_team_mail = get_sub_field('about_team_mail');
 			$about_team_aditional = get_sub_field('about_team_aditional');
+			$about_team_linkedin = get_sub_field('about_team_linkedin');
 		?>
 
 		<article class="team__item">
@@ -27,9 +28,14 @@
 				<div class="team__item-text__caption">
 					<h3><?php echo $about_team_name; ?></h3>
 					<?php echo $about_team_aditional; ?>
-					<?php if($about_team_mail):?>
-						<a href="mailto:<?php echo $about_team_mail;?>" class="mail-link"><?php echo $about_team_mail;?></a>
-					<?php endif;?>
+					<ul class="team__item-text__caption--links">
+						<?php if($about_team_linkedin):?>
+							<li><a href="<?php echo $about_team_linkedin; ?>" class="in-link" target="_blank">LinkedIn</a></li>
+						<?php endif;?>
+						<?php if($about_team_mail):?>
+							<li><a href="mailto:<?php echo $about_team_mail; ?>" class="mail-link"><?php echo $about_team_mail;?></a></li>
+						<?php endif;?>
+					</ul>				
 				</div>
 			</div>
 		</article>

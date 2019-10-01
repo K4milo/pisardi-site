@@ -53,15 +53,15 @@
 				@include bgcover;
 				.glass-icon {
 					display: none;
-					width: rem(94px);
-					height: rem(94px);
+					width: rem(64px);
+					height: rem(64px);
 					border-radius: 100%;
 					background-color: rgba($wheat,0.8);
 					@include center('both');
 					&::after {
 						content:"";
-						width: rem(39px);
-						height: rem(39px);
+						width: rem(29px);
+						height: rem(29px);
 						display: block;
 						@include iconBg('../images/icons/zoom-in.png');
 						@include center('both');

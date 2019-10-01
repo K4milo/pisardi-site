@@ -57,9 +57,24 @@
 				z-index: 1;
 				left: rem(20px);
 				bottom: rem(20px);
+				transition: all 0.32s ease-in;
 				@include mq('md') {
 					width: rem(100px);
 				}
+			}
+			&.Arquitectónico {
+				img {
+					width: rem(170px);
+					height: rem(130px);
+					left: rem(8px);
+					bottom: rem(10px);
+					transform: rotate(24deg);
+				}
+			}
+
+			&:hover {
+				transition: all 0.42s ease-out;
+				transform: rotate(-24deg);
 			}
 		}
 		&-text {

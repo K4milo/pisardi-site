@@ -166,16 +166,28 @@
 		}
 
 		.widget_custom_html {
+			letter-spacing: 3px;
+			@include font(12px);
+			text-align: center;
+			@include mq('md') {
+				@include font(14px);
+				margin: 0 0 rem(50px);
+			}
 			a {
 				color: $white;
 				text-align: center;
+				&.footer__mail {					
+					display: inline-block;
+					margin: rem(25px) 0 rem(4px);		
+				}				
+			}
+		}
+
+		.footer__numbers {
+			li {
 				display: inline-block;
-				margin: rem(25px) 0; 
-				letter-spacing: 2px;
-				@include font(12px);
-				@include mq('md') {
-					@include font(14px);
-					margin: 0 0 rem(50px);
+				a {
+					@include font(12px);
 				}
 			}
 		}
@@ -207,7 +219,12 @@
 					}
 					&.lin {
 						a {
-							@include iconBg('../images/icons/linkedin.svg');
+							@include iconBg('../images/icons/linkedin-white.svg');
+						}
+					}
+					&.whatsapp {
+						a {
+							@include iconBg('../images/icons/whatsapp.svg');
 						}
 					}
 				}
@@ -217,7 +234,8 @@
 
 	&-year {
 		padding: rem(25px);
-		background-color: $black;
+		background-color: $black-lt;
+		border-top: rem(2px) solid rgba($white,0.2);
 		color: $gray;
 		a {
 			color: $gray;

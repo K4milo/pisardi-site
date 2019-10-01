@@ -8,4 +8,6 @@
 
 	get_template_part('includes/loops/loop','projects');
 
+	get_template_part('includes/prefooter');
+
 	get_template_part('includes/footer');

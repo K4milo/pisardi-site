@@ -26,7 +26,7 @@
 				?>
 
 				<article class="services__item">
-					<figure class="services__item-thumb">
+					<figure class="services__item-thumb <?php echo $about_services_name; ?>">
 						<img src="<?php echo $about_services_img; ?>" alt="<?php echo $about_services_name; ?>">
 					</figure>
 					<div class="services__item-text">
