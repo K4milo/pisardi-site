@@ -147,11 +147,11 @@
 	&__logo {		
 		width: rem(208px);
 		height: rem(43px);
-		margin: 0 0 rem(25px); 
+		margin: 0 0 rem(16px); 
 		display: inline-block;
 		@include iconBg('../images/brand/logotipo.svg');
 		@include mq('md') {
-			margin: 0 0 rem(40px);
+			margin: 0 0 rem(20px);
 			width: rem(285px);
 			height: rem(72px);
 		}		
@@ -171,14 +171,14 @@
 			text-align: center;
 			@include mq('md') {
 				@include font(14px);
-				margin: 0 0 rem(50px);
+				margin: 0 0 rem(20px);
 			}
 			a {
 				color: $white;
 				text-align: center;
 				&.footer__mail {					
 					display: inline-block;
-					margin: rem(25px) 0 rem(4px);		
+					margin: rem(16px) 0 rem(4px);		
 				}				
 			}
 		}
@@ -186,8 +186,9 @@
 		.footer__numbers {
 			li {
 				display: inline-block;
+				margin-top: 0;
 				a {
-					@include font(12px);
+					@include font(11px);
 				}
 			}
 		}
