@@ -9,10 +9,14 @@
 
 		// scripts for Menu
 		menuScripts: function() { 
+			
+			let button_menu = $('.navbar-toggle');
+			let header_el   = $('.navbar');	
+
 			$(window).scroll(function() {
 
-				let scroll    = $(window).scrollTop();
-				let header_el = $('.navbar');
+				let scroll      = $(window).scrollTop();
+							
 
 				if (scroll >= 100) {
 					header_el.addClass("scroll_menu");
@@ -20,6 +24,16 @@
 					header_el.removeClass("scroll_menu");
 				}
 			});
+
+			// Open menu trigger
+			if(button_menu) {
+				button_menu.on('click',  function(event) {
+					event.preventDefault();
+					/* Act on the event */
+					header_el.toggleClass('open_menu');
+					$('body').toggleClass('open');
+				});
+			}
 		},
 	}
 

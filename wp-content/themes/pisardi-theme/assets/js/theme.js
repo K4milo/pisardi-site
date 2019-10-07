@@ -84,10 +84,13 @@
 
 		// scripts for Menu
 		menuScripts: function menuScripts() {
+
+			var button_menu = $('.navbar-toggle');
+			var header_el = $('.navbar');
+
 			$(window).scroll(function () {
 
 				var scroll = $(window).scrollTop();
-				var header_el = $('.navbar');
 
 				if (scroll >= 100) {
 					header_el.addClass("scroll_menu");
@@ -95,6 +98,16 @@
 					header_el.removeClass("scroll_menu");
 				}
 			});
+
+			// Open menu trigger
+			if (button_menu) {
+				button_menu.on('click', function (event) {
+					event.preventDefault();
+					/* Act on the event */
+					header_el.toggleClass('open_menu');
+					$('body').toggleClass('open');
+				});
+			}
 		}
 	};
 

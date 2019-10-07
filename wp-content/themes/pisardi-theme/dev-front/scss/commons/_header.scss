@@ -34,7 +34,7 @@
 		}
 		.brand-image {			
 			width: rem(208px);
-			height: rem(43px);
+			height: rem(46px);
 			margin: rem(5px) 0 0 0; 
 			display: inline-block;
 			vertical-align: bottom;
@@ -114,7 +114,7 @@ body {
 			position: fixed;
 			background-color: transparent;
 			margin: 0 0 0 0;
-			padding: rem(25px);
+			padding: rem(25px) 0;
 			border: none;
 			top: 0;
 			left: 0;
@@ -140,6 +140,36 @@ body {
 					> li {
 							a {
 								color: $white;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+body {
+	&.open {
+		overflow: hidden;
+		.navbar {
+			&.open_menu {
+				height: 100vh;
+				z-index: 1000;
+				background-color: $blue-dk-2;
+				.navbar-header {
+					.brand-image {	
+						background-image: url('../images/brand/logotipo.svg');
+					}
+				}
+				.navbar-collapse {
+					ul {
+						&.navbar-nav {
+						> li {
+								a {
+									padding: rem(16px);
+									color: $white;
+								}
 							}
 						}
 					}
