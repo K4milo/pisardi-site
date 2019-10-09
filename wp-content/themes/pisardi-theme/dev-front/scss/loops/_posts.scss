@@ -1,0 +1,70 @@
+.posts {
+	&__wrapper {
+		display:block;
+		@include mq('md') {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
+	}
+	a {
+		&:hover {
+			text-decoration: none;
+		}
+	}
+
+	// Each item
+	&--item {
+		display: block;
+		margin: rem(16px) auto;
+		border-radius: rem(16px);
+		background-color: $gray-w;
+		overflow: hidden;
+		transition: all 0.32s;
+		@include mq('md') {
+			width: 31%;
+		}
+		figure {
+			width: 100%;
+			height: rem(244px);
+			@include bgcover;
+		}
+		&__caption {			
+			padding: rem(22px);
+			color: $gray;
+			header {
+				h3 {
+					@include font(22px);
+					color: $black;
+					margin-top: 0;
+				}
+			}
+			h4 {
+				font-family: $m-bd;
+				@include font(12px);
+			}
+			p {
+				@include font(14px);
+				line-height: 1.5;
+			}
+		}
+		&:nth-child(5n+5){
+			@include mq('md') {
+				width: 64%;
+			}
+		}
+		&:hover {
+			background-color: $black;
+			color: $white;
+			transform: scale(1.02);
+			box-shadow: 0 0 rem(12px);
+			.posts--item__caption {
+				header {
+					h3 {
+						color: $white;
+					}
+				}
+			}
+		}
+	}
+}
