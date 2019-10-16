@@ -4,18 +4,18 @@
     min-height: 100vh;
     padding: 30vh 0;
     @include mq('md'){
-        padding: rem(470px) 0 rem(120px);
-        min-height: rem(820px);
+        padding: rem(120px) 0 rem(120px);
+        min-height: rem(420px);
     }
     &__caption {
         @include wrapper;
         max-width: rem(960px);
         h2 {
             color: $white;
-            @include font(35px);
+            @include font(25px);
             margin: 0 0;
             @include mq('md') {
-                @include font(60px);
+                @include font(50px);
                 max-width: rem(480px);
             }
         }

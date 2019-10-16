@@ -12,7 +12,9 @@
 ?>
 	<section id="TeamLoop" class="team">
 		<?php 
-
+		
+		$i=0;
+		
 		while(have_rows('about_team')): the_row();  
 
 			$about_team_thumb = get_sub_field('about_team_thumb');
@@ -20,9 +22,17 @@
 			$about_team_mail = get_sub_field('about_team_mail');
 			$about_team_aditional = get_sub_field('about_team_aditional');
 			$about_team_linkedin = get_sub_field('about_team_linkedin');
+
+			$classAnimation;
+
+			if($i % 2 == 0):
+                $classAnimation = 'fadeInLeft';
+            else:
+            	$classAnimation = 'fadeInRight';
+            endif;
 		?>
 
-		<article class="team__item">
+		<article class="team__item wow <?php echo $classAnimation; ?>" data-wow-duration="2s">
 			<figure class="team__item-thumb" style="background-image: url('<?php echo $about_team_thumb; ?>')"></figure>
 			<div class="team__item-text">
 				<div class="team__item-text__caption">
@@ -41,6 +51,7 @@
 		</article>
 
 		<?php
+		$i++;
 		endwhile;
 		?>
 	</section>

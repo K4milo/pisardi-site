@@ -31,6 +31,9 @@ function bst_enqueues() {
 	wp_register_script('slick-js', get_template_directory_uri() . '/assets/js/vendors/slick/slick.js', false, null, true);
 	wp_enqueue_script('slick-js');
 
+	wp_register_script('wow-js', get_template_directory_uri() . '/assets/js/vendors/wow/wow.js', false, null, true);
+	wp_enqueue_script('wow-js');
+
 	wp_register_script('vivus-js', get_template_directory_uri() . '/assets/js/vendors/vivus/vivus.min.js', false, null, true);
 	wp_enqueue_script('vivus-js');
 

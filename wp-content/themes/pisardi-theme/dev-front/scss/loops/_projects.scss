@@ -44,6 +44,7 @@
 			min-height: rem(320px);
 			background-color: $black;
 			position: relative;
+			overflow: hidden;
 			@include mq(md) {
 				width: 33.3%;
 			}
@@ -52,12 +53,13 @@
 				@include coverAbsolute(1);
 				@include bgcover;
 				.glass-icon {
-					display: none;
+					transition: all 0.52s;
 					width: rem(64px);
 					height: rem(64px);
 					border-radius: 100%;
 					background-color: rgba($wheat,0.8);
 					@include center('both');
+					top: -120%;
 					&::after {
 						content:"";
 						width: rem(29px);
@@ -74,7 +76,7 @@
 				@include coverAbsolute(2);
 				background-color: rgba($blue-dk,0.65);
 				opacity: 1;
-				transition: all 0.4s;
+				transition: all 1s;
 				padding: rem(20px);
 				@include mq(md) {
 					padding: rem(40px);
@@ -111,7 +113,7 @@
 			&:hover {
 				figure {
 					.glass-icon {
-						display: block;
+						top: 50%;
 					}
 				}
 				.projects__gallery--item__caption {

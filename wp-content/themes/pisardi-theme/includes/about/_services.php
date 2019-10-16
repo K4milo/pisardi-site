@@ -25,9 +25,9 @@
 					$about_services_txt = get_sub_field('about_services_txt');
 				?>
 
-				<article class="services__item">
+				<article class="services__item wow fadeIn" data-wow-duration="2s">
 					<figure class="services__item-thumb <?php echo $about_services_name; ?>">
-						<img src="<?php echo $about_services_img; ?>" alt="<?php echo $about_services_name; ?>">
+						<img src="<?php echo $about_services_img; ?>" alt="<?php echo $about_services_name; ?>" class="wow bounceInUp" data-wow-duration="3s">
 					</figure>
 					<div class="services__item-text">
 						<h3><?php echo $about_services_name; ?></h3>

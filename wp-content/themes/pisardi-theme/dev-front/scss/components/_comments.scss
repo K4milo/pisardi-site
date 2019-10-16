@@ -1,0 +1,34 @@
+.comments_wrapper {
+	padding: rem(40px) rem(15px);
+	@include mq('md'){
+		padding: rem(50px) rem(15px);
+	}
+	.alert {
+		&-info {
+			background-color: $rose;
+			border-color: $rose;
+			color: $white;
+		}
+	}
+	&__header {
+		h3 {
+			@include font(40px);
+			font-family: $m-bd;
+		}
+	}
+	&__form {
+		color: $gray-dk;
+		.form-group {
+			textarea {
+				background-color: transparent;
+				border-radius: 0;
+				border: rem(1px) solid;
+				color: $gray;
+			}
+		}
+		input[type="submit"],
+		input.btn {
+			@include defBtn(rem(17px),rem(12px),$wheat,$black);
+		}
+	}
+}

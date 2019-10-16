@@ -17,9 +17,14 @@
 	<article role="article" id="post_<?php the_ID()?>" <?php post_class()?>>
 		<div class="project-top">
 			<div class="project-top__content">
-				<h2><?php the_title(); ?></h2>
-				<?php the_content(); ?>
-				<span class="number"><?php echo $project_number ?></span>
+				<div class="project-top__content--inner">
+					<h2><?php the_title(); ?></h2>
+					<?php the_content(); ?>
+					<span class="number"><?php echo $project_number ?></span>
+				</div>
+				<div class="project-footer">
+					<a href="/proyectos/">Volver a proyectos</a>
+				</div>
 			</div>
 			<?php if($project_gallery): ?>
 				<div class="project-top__gallery">
@@ -45,10 +50,7 @@
 					</div>
 				</div>
 			<?php endif; ?>
-		</div>
-		<div class="project-footer">
-			<a href="/proyectos/">Volver a proyectos</a>
-		</div>
+		</div>		
 	</article>
 
 <?php endwhile; endif; 

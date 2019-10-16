@@ -5,16 +5,19 @@
 		flex-wrap: wrap;
 	}
 	&__content {
-		padding: rem(28px);
+		padding: rem(28px) 0 0;
 		background-color: $wheat;
 		position: relative;
 		overflow: hidden;
+		@include mq('md'){
+			width: 40%;
+			padding: rem(70px) 0 0;
+		}
 		.number {
 			font-family: $m-bd;
 			color: rgba($black,0.07);
 			position: absolute;
-			bottom: 0;
-			right: rem(-50px);
+			@include center('both');
 			z-index: 0;
 			line-height: 0.8;
 			@include font(280px);
@@ -22,10 +25,12 @@
 				@include font(480px);
 			}
 		}
-		@include mq('md'){
-			width: 40%;
-			padding: rem(127px) rem(80px);
-		}
+		&--inner {
+			padding: 0 rem(40px) rem(40px);
+			@include mq('md'){
+				padding: 0 rem(80px) rem(80px);
+			}
+		}		
 		h2 {
 			@include font(30px);
 			margin-bottom: rem(20px);
@@ -120,17 +125,19 @@
 
 .project-footer {
 	text-align: center;
-	padding: rem(20px);
+	padding: rem(10px);
 	background-color: $blue-gr;
+	position: relative;
+	z-index: 4;
 	@include mq('md'){
-		padding: rem(55px);
+		padding: rem(15px);
 	}
 	a {
 		display: inline-block;
 		font-family: $m;
 		color: $white;
 		text-transform: uppercase;
-		padding: rem(13px) rem(20px);
+		padding: rem(8px) rem(20px);
 		border: rem(2px) solid $wheat;
 		border-radius: rem(40px);
 		@include font(17px);
