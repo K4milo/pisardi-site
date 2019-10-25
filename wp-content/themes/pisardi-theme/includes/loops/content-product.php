@@ -22,7 +22,7 @@
 					<?php the_content(); ?>
 					<span class="number"><?php echo $project_number ?></span>
 				</div>
-				<div class="project-footer">
+				<div class="project-footer hidden-xxs">
 					<a href="/proyectos/">Volver a proyectos</a>
 				</div>
 			</div>
@@ -52,5 +52,8 @@
 			<?php endif; ?>
 		</div>		
 	</article>
+	<div class="project-footer visible-xxs">
+		<a href="/proyectos/">Volver a proyectos</a>
+	</div>
 
 <?php endwhile; endif; 

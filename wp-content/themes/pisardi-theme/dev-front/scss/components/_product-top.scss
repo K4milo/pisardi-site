@@ -22,7 +22,12 @@
 			line-height: 0.8;
 			@include font(280px);
 			@include mq('md'){
-				@include font(480px);
+				top: unset;
+				left: unset;
+				transform: none;
+				bottom: rem(56px);
+				right: rem(-36px);
+				@include font(420px);
 			}
 		}
 		&--inner {
@@ -125,21 +130,18 @@
 
 .project-footer {
 	text-align: center;
-	padding: rem(10px);
+	padding: rem(16px);
 	background-color: $blue-gr;
 	position: relative;
 	z-index: 4;
-	@include mq('md'){
-		padding: rem(15px);
-	}
 	a {
 		display: inline-block;
 		font-family: $m;
 		color: $white;
 		text-transform: uppercase;
-		padding: rem(8px) rem(20px);
+		padding: rem(6px) rem(20px);
 		border: rem(2px) solid $wheat;
 		border-radius: rem(40px);
-		@include font(17px);
+		@include font(12px);
 	}
 }

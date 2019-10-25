@@ -26,6 +26,20 @@ body {
 		height: auto;
 	}
 
+	.hidden-xxs {
+		display: none;
+		@include mq('md'){
+			display: block;
+		}
+	}
+
+	.visible-xxs {
+		display: block;
+		@include mq('md'){
+			display: none;
+		}
+	}
+
 	// Under construction
 	&.page-template-_construction-tpl {
 		article {

@@ -9,12 +9,18 @@
     }
     &__caption {
         @include wrapper;
-        max-width: rem(960px);
+        max-width: rem(1160px);
+        padding: 0 rem(30px);
+        @include mq('md') {
+            padding: initial;
+        }
         h2 {
             color: $white;
             @include font(25px);
             margin: 0 0;
+            text-align: center;
             @include mq('md') {
+                text-align: left;
                 @include font(50px);
                 max-width: rem(480px);
             }

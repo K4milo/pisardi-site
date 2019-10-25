@@ -1,14 +1,20 @@
 .sticky-social {
 	position: fixed;
+	display: block;
 	bottom: rem(40px);
-	left: rem(40px);
-	width: 100%;
+	left: rem(40px);	
 	z-index: 10;
+	@include mq('md') {
+		width: 100%;
+	}
 	&__nav {
 		padding: 0 0;
 		li {
 			display: inline-block;
-			margin-right: rem(16px);
+			margin-right: rem(10px);
+			@include mq('md') {
+				margin-right: rem(16px);
+			}			
 			a {
 				display: block; 
 				width: rem(25px);

@@ -32,7 +32,7 @@
 			margin: 0 0;
 			border: none;
 			@include bgcover;
-			min-height: rem(430px);
+			min-height: rem(260px);
 			position: relative;
 			padding: rem(25px);
 			@include mq('md') {				

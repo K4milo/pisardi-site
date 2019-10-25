@@ -55,8 +55,13 @@
 						}
 						a {
 							color: $white;
+							display: inline-block;
+							@include mq('md') {
+								display: block;
+							}
 						}
 						&.mail {
+
 							&::before {
 								@include iconBg('../images/icons/mail.svg');
 							}
