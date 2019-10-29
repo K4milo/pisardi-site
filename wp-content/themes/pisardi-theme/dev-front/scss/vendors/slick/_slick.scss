@@ -188,8 +188,8 @@
     li {
         position: relative;
         display: inline-block;
-        height: 20px;
-        width: 20px;
+        height: 10px;
+        width: 10px;
         margin: 0 5px;
         padding: 0;
         cursor: pointer;
@@ -197,8 +197,8 @@
             border: 0;
             background: transparent;
             display: block;
-            height: 20px;
-            width: 20px;
+            height: 10px;
+            width: 10px;
             outline: none;
             line-height: 0px;
             font-size: 0px;
@@ -212,13 +212,15 @@
             }
             &:before {
                 position: absolute;
-
-                width: 20px;
-                height: 20px;
+                width: 15px;
+                height: 15px;
             }
         }
-        &.slick-active button:before {
-            
+        &.slick-active {
+            button {
+                height: 15px;
+                width: 15px;
+            }    
         }
     }
 }

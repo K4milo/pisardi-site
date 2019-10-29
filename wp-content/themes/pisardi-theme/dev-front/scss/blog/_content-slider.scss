@@ -13,14 +13,14 @@
 				display: inline-block;
 				vertical-align: middle;
 				margin: rem(7px) rem(6px);
-				width: rem(15px);
-				height: rem(15px);
+				width: rem(10px);
+				height: rem(10px);
 				border-radius: 100%;
 				background-color: rgba($white,0.5);
 				transition: all 0.34s;
 				&.slick-active {
-					width: rem(20px);
-					height: rem(20px);
+					width: rem(10px);
+					height: rem(10px);
 					background-color: $white;
 				}
 			}

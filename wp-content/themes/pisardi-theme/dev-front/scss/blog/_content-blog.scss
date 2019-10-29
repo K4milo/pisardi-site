@@ -1,5 +1,5 @@
 .content-blog {
-	padding: rem(54px);
+	padding: rem(54px) rem(20px);
 	@include mq('sm') {
 		padding: rem(94px) 0 rem(46px);
 	}
@@ -46,7 +46,7 @@
 
 // Aditional content
 .add-content-blog {
-	padding: rem(54px);
+	padding: rem(54px) rem(20px);
 	@include mq('sm') {
 		padding: rem(68px) 0;
 	}

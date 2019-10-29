@@ -13,7 +13,7 @@
 		
 		// Text Footer
 		.text-2 {
-			padding: rem(40px);
+			padding: rem(40px) rem(20px);
 			@include mq('md') {
 				width: 50%;
 				padding: 0 rem(80px) 0 0;
@@ -151,7 +151,7 @@
 	font-family: $m;
 	&__logo {		
 		width: rem(208px);
-		height: rem(43px);
+		height: rem(46px);
 		margin: 0 0 rem(16px); 
 		display: inline-block;
 		@include iconBg('../images/brand/logotipo.svg');

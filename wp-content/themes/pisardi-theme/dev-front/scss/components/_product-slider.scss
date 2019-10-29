@@ -19,8 +19,8 @@
 				background-color: rgba($white,0.5);
 				transition: all 0.34s;
 				&.slick-active {
-					width: rem(20px);
-					height: rem(20px);
+					width: rem(15px);
+					height: rem(15px);
 					background-color: $white;
 				}
 			}
