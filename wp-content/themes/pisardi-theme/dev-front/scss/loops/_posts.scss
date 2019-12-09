@@ -54,8 +54,10 @@
 			}
 		}
 		&:hover {
-			background-color: $black;
-			color: $white;
+			@include mq('md') {
+				background-color: $black;
+				color: $white;
+			}
 			transform: scale(1.02);
 			box-shadow: 0 0 rem(12px);
 			.posts--item__caption {

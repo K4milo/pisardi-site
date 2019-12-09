@@ -44,7 +44,7 @@
 			@include mq('md'){
 				display: inline-block;
 				max-width: 60%;
-				line-height: 1;
+				line-height: 1.2;
 				margin-bottom: rem(35px);				
 				@include font(55px);
 			}
